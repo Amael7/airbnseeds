@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_100614) do
+ActiveRecord::Schema.define(version: 2019_11_26_103638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 2019_11_26_100614) do
     t.index ["user_id"], name: "index_seedpackages_on_user_id"
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.date "transaction_date"
+    t.integer "total_price"
+    t.string "transaction_status"
+    t.bigint "seedpackage_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seedpackage_id"], name: "index_transactions_on_seedpackage_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,4 +52,6 @@ ActiveRecord::Schema.define(version: 2019_11_26_100614) do
   end
 
   add_foreign_key "seedpackages", "users"
+  add_foreign_key "transactions", "seedpackages"
+  add_foreign_key "transactions", "users"
 end
