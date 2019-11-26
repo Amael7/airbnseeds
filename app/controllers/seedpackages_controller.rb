@@ -23,7 +23,7 @@ class SeedpackagesController < ApplicationController
 
   private
 
-  def cocktail_params
+  def seedpackage_params
     params.require(:seedpackage).permit(:name, :description, :location, :photo, :package_price)
   end
 end
