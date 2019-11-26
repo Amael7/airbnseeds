@@ -1,0 +1,2 @@
+class SeedpackagesController < ApplicationController
+end
