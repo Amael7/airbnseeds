@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :seedpackages, only: [:index, :show, :new, :create] do
     resources :transactions, only: :create
   end
+
+  delete '/seedpackages/:id', to: 'seedpackages#destroy', as: :seedpackages_delete
+
 end

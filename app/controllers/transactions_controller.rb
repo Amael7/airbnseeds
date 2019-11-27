@@ -1,7 +1,7 @@
 # require 'pry-byebug'
 
 class TransactionsController < ApplicationController
-  before_action :set_params, only: :create
+  before_action :set_params, only: %i[create]
 
   def create
     @transaction = Transaction.new
@@ -9,8 +9,8 @@ class TransactionsController < ApplicationController
     @transaction.seedpackage = @seedpackage
     @transaction.total_price = @seedpackage.package_price
     @transaction.transaction_date = Time.now
-    @transaction.transaction_status = "wait"
     if @transaction.save
+      @seedpackage.update(status: 'Sold Out')
       redirect_to seedpackages_path # a remplacer par le lien du dashboard
     else
       render 'seedpackages/show'
