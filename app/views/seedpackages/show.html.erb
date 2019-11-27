@@ -3,5 +3,3 @@
 <p><%= @seedpackage.location  %></p>
 <p><%=@seedpackage.package_price  %>€</p>
 <p><%= @seedpackage.user.username %></p>
-
-<%= button_to'Buy', seedpackage_transactions_path(@seedpackage), method: :post %>
