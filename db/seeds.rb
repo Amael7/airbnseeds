@@ -10,6 +10,7 @@ require 'faker'
 puts 'Clean database...'
 
 User.destroy_all
+Transaction.destroy_all
 
 puts 'Creating 25 fake user...'
 15.times do

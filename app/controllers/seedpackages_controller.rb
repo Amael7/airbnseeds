@@ -16,6 +16,7 @@ class SeedpackagesController < ApplicationController
 
   def create
     @seedpackage = Seedpackage.new(seedpackage_params)
+    @seedpackage.status = 'disponible'
     @seedpackage.user = current_user
     if @seedpackage.save
       redirect_to seedpackage_path(@seedpackage)
@@ -25,9 +26,8 @@ class SeedpackagesController < ApplicationController
   end
 
   def destroy
-    # @seedpackage = Seedpackage.find(params[:id])
     @seedpackage.destroy
-    redirect_to seedpackages_path(@seedpackage)
+    redirect_to seedpackages_path
   end
 
   private
