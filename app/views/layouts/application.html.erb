@@ -14,6 +14,7 @@
     <%= render 'shared/flashes' %>
     <%= link_to "Your Dashboard", dashboard_path, class: 'btn btn-primary' %>
     <%= link_to "Retour aux graines", seedpackages_path, class: 'btn btn-primary' %>
+    <%= link_to "Create an annonce", new_seedpackage_path, class: 'btn btn-primary' %>
     <div class="page"> <%= yield %> </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
