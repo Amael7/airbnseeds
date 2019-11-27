@@ -1,0 +1,48 @@
+.seed-card {
+  width: 100%;
+  padding: 25px;
+}
+.seed-card-img {
+  background-size: cover;
+}
+.btn-primary {
+  color: $white;
+}
+.card-container {
+  display: flex;
+  align-content: space-between;
+}
+.img-container {
+  margin-bottom: 40px;
+    display: flex;
+
+  }
+
+.first-img {
+  width: 400px;
+  height: 365px;
+  border-radius: 25px;
+}
+
+.second-img {
+  width: 178px;
+  height: 178px;
+  border-radius: 25px 25px 0px 0px;
+  display: block;
+  margin: 0px 0px 10px 10px;
+
+}
+.third-img {
+  width: 178px;
+  height: 178px;
+  border-radius:  0px 0px 25px 25px;
+  display: block;
+  margin: 10px 0px 0px 10px;
+}
+.map {
+  width: 430px;
+  height: 470px;
+  border-radius: 25px;
+  display: block;
+  margin: 0px 0px 0px 70px;
+}

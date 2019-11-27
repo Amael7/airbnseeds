@@ -1,6 +1,29 @@
-<h2><%= @seedpackage.name  %></h2>
+<div class="container">
+  <div class="seed-card">
+<h2><%= @seedpackage.name  %> &nbsp;
+<%=@seedpackage.package_price  %>&thinsp;€
+<button type="button" class="btn btn-primary">Buy</button></h2>
+<p>Sold by&thinsp;: <%= @seedpackage.user.username %>
+<%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
+  <div class="card-container">
+  <div class="img-container">
+  <div class="seed-card first-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza1.jpg)">
+  </div>
+  <div class="group-img">
+  <div class="seed-card second-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza2.jpg)">
+  </div>
+  <div class="seed-card third-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza3.jpg)">
+  </div>
+  </div>
+  </div>
+  <div class="map" style="background-image: url(http://ben-riollet.com/seed/map.png)"><p><%= @seedpackage.location  %></p>
+  </div>
+  </div>
 <p><%= @seedpackage.description  %></p>
-<p><%= @seedpackage.location  %></p>
-<p><%=@seedpackage.package_price  %>€</p>
-<p><%= @seedpackage.user.username %></p>
+  </div>
+</div>
 
+
+
+
+<%= button_to'Buy', seedpackage_transactions_path(@seedpackage), method: :post %>
