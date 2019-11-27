@@ -11,9 +11,11 @@
 <h2>Commandes passées</h2>
   <% @transactions_select.each do |transaction| %>
   <ul>
-    <li><u>Transation id:</u> <%= transaction.id %> <br><u>Total price:</u> <%= transaction.total_price %> <br> <u>Date de transaction:</u> <%= transaction.transaction_date %> <br></li>
+    <li><u>Graines:</u> <%= transaction.seedpackage.name %> <br><u>Total price:</u> <%= transaction.total_price %>€ <br> <u>Date de transaction:</u> <%= transaction.transaction_date %> <br></li>
   </ul>
   <% end %>
   <p>Vous avez achetés <%= @transactions_select.count %> paquets de graines !</p>
+
+
 
 
