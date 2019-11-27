@@ -6,7 +6,6 @@ class SeedpackagesController < ApplicationController
   end
 
   def show
-    # @seedpackage = Seedpackage.find(params[:id])
     @transaction = Transaction.new
   end
 
