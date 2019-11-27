@@ -14,7 +14,7 @@ class SeedpackagesController < ApplicationController
 
   def create
     @seedpackage = Seedpackage.new(seedpackage_params)
-    @seedpackage.status = 'disponible'
+    @seedpackage.status = 'Disponible'
     @seedpackage.user = current_user
     if @seedpackage.save
       redirect_to seedpackage_path(@seedpackage)

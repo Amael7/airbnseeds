@@ -10,7 +10,6 @@ require 'faker'
 puts 'Clean database...'
 
 User.destroy_all
-Transaction.destroy_all
 
 puts 'Creating 25 fake user...'
 15.times do
@@ -29,6 +28,7 @@ puts 'Creating 25 fake user...'
     photo: Faker::Internet.url,
     package_price: Faker::Number.between(from: 1, to: 10),
     user: user,
+    status: 'Disponible'
     )
     seedpackage.save!
   end
