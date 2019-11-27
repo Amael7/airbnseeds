@@ -1,4 +1,11 @@
 
+<h1>Package seeds index, without style</h1>
+<ul>
+  <% @seedpackages.each do |seedpackage| %>
+    <li><%= link_to seedpackage.name, seedpackage_path(seedpackage.id) %><p><%= seedpackage.package_price %>€</p></li>
+  <% end %>
+</ul>
+
 <div class="container">
   <div class="cards">
     <% @seedpackages.each do |seedpackage| %>
