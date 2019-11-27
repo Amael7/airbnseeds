@@ -1,0 +1,9 @@
+<h1>Create a new seedpackage</h1>
+<%= simple_form_for @seedpackage do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :location %>
+  <%= f.input :package_price %>
+  <%= f.input :photo %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
