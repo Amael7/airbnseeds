@@ -1,6 +1,21 @@
-<h1>Package seeds index, without style</h1>
-<ul>
-  <% @seedpackages.each do |seedpackage| %>
-    <li><%= link_to seedpackage.name, seedpackage_path(seedpackage.id) %><p><%= seedpackage.package_price %>€</p></li>
-  <% end %>
-</ul>
+
+<div class="container">
+  <div class="cards">
+    <% @seedpackages.each do |seedpackage| %>
+    <div class="card-product row justify-content-between">
+      <div class="card-product-infos col-2">
+      <img class="left-img" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      </div>
+      <div class="card-product-txt col-10">
+        <div class="item-info">
+          <h2> <%= seedpackage.name %> </h2>
+          <div> <%= seedpackage.description %> </div>
+        </div>
+      <div class="user-infos">
+        <img id="avatar-user" class="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+        <div> <%= seedpackage.user.username %> </div>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
