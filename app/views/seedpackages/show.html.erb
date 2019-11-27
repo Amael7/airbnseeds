@@ -1,15 +1,8 @@
-
-<h2><%= @seedpackage.name  %></h2>
-<p><%= @seedpackage.description  %></p>
-<p><%= @seedpackage.location  %></p>
-<p><%= @seedpackage.package_price  %>€</p>
-<p><%= @seedpackage.user.username %></p>
-
 <div class="container">
   <div class="seed-card">
 <h2><%= @seedpackage.name  %> &nbsp;
 <%=@seedpackage.package_price  %>&thinsp;€
-<button type="button" class="btn btn-primary"> Buy</button></h2>
+<%= link_to 'Buy', seedpackage_transactions_path(@seedpackage), method: :post, class: 'btn btn-primary'%></h2>
 <p>Sold by&thinsp;: <%= @seedpackage.user.username %>
 <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
   <div class="card-container ">
