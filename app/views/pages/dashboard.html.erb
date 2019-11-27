@@ -1,0 +1,19 @@
+<h1>Dashboard de <%= @user.username %></h1>
+
+<h2>Mes graines</h2>
+  <% @seedpackages_select.each do |seedpackage|  %>
+  <ul>
+    <li><u>Graines:</u> <%= seedpackage.name %>  <br><u>Description:</u> <%= seedpackage.description %> <br><u>Prix:</u> <%= seedpackage.package_price %>€ <br><u>Date de création:</u> <%= seedpackage.created_at %></li>
+  </ul>
+  <% end %>
+  <p>Vous avez <%= @seedpackages_select.count %> paquets de graines en vente !</p>
+
+<h2>Commandes passées</h2>
+  <% @transactions_select.each do |transaction| %>
+  <ul>
+    <li><u>Transation id:</u> <%= transaction.id %> <br><u>Total price:</u> <%= transaction.total_price %> <br> <u>Date de transaction:</u> <%= transaction.transaction_date %> <br></li>
+  </ul>
+  <% end %>
+  <p>Vous avez achetés <%= @transactions_select.count %> paquets de graines !</p>
+
+
