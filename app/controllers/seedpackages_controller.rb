@@ -2,7 +2,11 @@ class SeedpackagesController < ApplicationController
   before_action :set_seedpackages, only: %i[show destroy]
 
   def index
-    @seedpackages = Seedpackage.all
+    if params[:query].present?
+      @seedpackages = Seedpackage.search_seeds(params[:query])
+    else
+      @seedpackages = Seedpackage.all
+    end
   end
 
   def show
