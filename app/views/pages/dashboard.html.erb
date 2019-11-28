@@ -1,21 +1,27 @@
-<h1>Dashboard de <%= @user.username %></h1>
+<div class="container-dashboard">
+  <div class="dashboard-user">
+    <h1>Dashboard de <%= @user.username %></h1>
+  </div>
 
-<h2>Mes graines</h2>
-  <% @seedpackages_select.each do |seedpackage|  %>
-  <ul>
-    <li><u>Graines:</u> <%= seedpackage.name %>  <br><u>Description:</u> <%= seedpackage.description %> <br><u>Prix:</u> <%= seedpackage.package_price %>€ <br><u>Date de création:</u> <%= seedpackage.created_at %></li>
-  </ul>
-  <% end %>
-  <p>Vous avez <%= @seedpackages_select.count %> paquets de graines en vente !</p>
+  <div class="dashboard-cards">
+    <h2>Mes graines</h2>
+      <% @seedpackages_select.each do |seedpackage|  %>
+      <ul>
+        <li><u>Graines:</u> <%= seedpackage.name %>  <br><u>Description:</u> <%= seedpackage.description %> <br><u>Prix:</u> <%= seedpackage.package_price %>€ <br><u>Date de création:</u> <%= seedpackage.created_at %></li>
+      </ul>
+      <% end %>
+      <p>Vous avez <%= @seedpackages_select.count %> paquets de graines en vente !</p>
+  </div>
 
-<h2>Commandes passées</h2>
-  <% @transactions_select.each do |transaction| %>
-  <ul>
-    <li><u>Graines:</u> <%= transaction.seedpackage.name %> <br><u>Total price:</u> <%= transaction.total_price %>€ <br> <u>Date de transaction:</u> <%= transaction.transaction_date %> <br></li>
-  </ul>
-  <% end %>
-  <p>Vous avez achetés <%= @transactions_select.count %> paquets de graines !</p>
-
-
+  <div class="dashboard-cards">
+    <h2>Commandes passées</h2>
+      <% @transactions_select.each do |transaction| %>
+      <ul>
+        <li><u>Graines:</u> <%= transaction.seedpackage.name %> <br><u>Total price:</u> <%= transaction.total_price %>€ <br> <u>Date de transaction:</u> <%= transaction.transaction_date %> <br></li>
+      </ul>
+      <% end %>
+      <p>Vous avez achetés <%= @transactions_select.count %> paquets de graines !</p>
+  </div>
+</div>
 
 
