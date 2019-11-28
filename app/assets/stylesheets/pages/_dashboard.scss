@@ -1,0 +1,36 @@
+// style for Dashboard pages
+.container-dashboard{
+  width: 900px;
+  margin: 0 auto;
+}
+
+.dashboard-user{
+  overflow: hidden;
+  height: 50px;
+  background: $green1;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  margin-top: 15px;
+}
+
+.dashboard-user h1{
+  color: #fd4441;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.dashboard-cards{
+  overflow: hidden;
+  height: 400px;
+  background: $green1;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  margin-top: 15px;
+}
+
+.dashboard-cards h2{
+  color: #fd4441;
+  font-weight: bold;
+  text-align: center;
+}
