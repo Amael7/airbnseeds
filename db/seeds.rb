@@ -22,7 +22,7 @@ puts 'Creating 25 fake user...'
 
   3.times do
     seedpackage = Seedpackage.new(
-    name:    Faker::Company.name,
+    name:    Faker::Food.vegetables,
     description: Faker::Lorem.sentence,
     location: Faker::Address.full_address,
     photo: Faker::Internet.url,
