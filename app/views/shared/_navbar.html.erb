@@ -7,8 +7,14 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="searchbar">
-  <input class="search" type="text">
-  <button>Search</button>
+    <%= form_tag seedpackages_path, class: "barbar", method: :get do %>
+       <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find some SEEDS"
+        %>
+    <% end %>
   </div>
 
 

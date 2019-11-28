@@ -7,4 +7,12 @@ class Seedpackage < ApplicationRecord
   validates :location, presence: true
   validates :photo, presence: true
   validates :package_price, presence: true
+
+  include PgSearch::Model
+    pg_search_scope :search_seeds,
+    against: [:name, :description],
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end
