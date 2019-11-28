@@ -7,6 +7,7 @@ class Seedpackage < ApplicationRecord
   validates :location, presence: true
   validates :photo, presence: true
   validates :package_price, presence: true
+  mount_uploader :photo, PhotoUploader
 
   include PgSearch::Model
     pg_search_scope :search_seeds,
@@ -14,5 +15,4 @@ class Seedpackage < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
 end
