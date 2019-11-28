@@ -5,6 +5,7 @@
 
   <div class="dashboard-cards">
     <h2>Mes graines</h2>
+        <div class="seedpacks">
     <p>Vous avez <%= @seedpackages_select.count %> paquets de graines en vente !</p>
     <div class="graines-cards">
       <% @seedpackages_select.each do |seedpackage| %>
@@ -27,16 +28,19 @@
       </div>
       <% end %>
     </div>
+    </div>
   </div>
 
   <div class="dashboard-cards">
     <h2>Commandes passées</h2>
+          <div class="seedpacks">
       <% @transactions_select.each do |transaction| %>
       <ul>
         <li><u>Graines:</u> <%= transaction.seedpackage.name %> <br><u>Total price:</u> <%= transaction.total_price %>€ <br> <u>Date de transaction:</u> <%= transaction.transaction_date %> <br></li>
       </ul>
       <% end %>
       <p>Vous avez achetés <%= @transactions_select.count %> paquets de graines !</p>
+  </div>
   </div>
 </div>
 
