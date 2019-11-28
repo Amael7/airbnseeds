@@ -7,7 +7,7 @@
 <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
   <div class="card-container ">
   <div class="img-container">
-  <div class="seed-card first-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza1.jpg)">
+    <%= cl_image_tag @seedpackage.photo, height: 300, width: 400, crop: :fill, class: "left-img" %> <!--  <div class="seed-card first-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza1.jpg)"> -->
   </div>
   <div class="group-img">
   <div class="seed-card second-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza2.jpg)">
