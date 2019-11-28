@@ -1,16 +1,12 @@
-<div class="page-f">
-  <div class="form-container">
-    <h1>Create a new seedpackage</h1>
-    <div class="form">
-      <%= simple_form_for @seedpackage do |f| %>
-      <%= f.input :name, class: "rad" %>
-      <%= f.input :description, class: "rad" %>
-      <%= f.input :location, class: "rad"%>
-      <%= f.input :package_price, class: "rad" %>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.button :submit, class: 'btn btn-primary2' %>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-container">
+        <h1>Create a new seedpackage</h1>
+        <div class="form">
+          <%= render "form", seedpackage: @seedpackage %>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
   </div>
 </div>

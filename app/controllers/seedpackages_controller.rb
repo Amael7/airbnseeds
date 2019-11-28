@@ -27,9 +27,19 @@ class SeedpackagesController < ApplicationController
     end
   end
 
+  def edit
+    set_seedpackages
+  end
+
+  def update
+    @seedpackage = Seedpackage.find(params[:id])
+    @seedpackage.update(seedpackage_params)
+    redirect_to dashboard_path
+  end
+
   def destroy
     @seedpackage.destroy
-    redirect_to seedpackages_path
+    redirect_to dashboard_path
   end
 
   private
