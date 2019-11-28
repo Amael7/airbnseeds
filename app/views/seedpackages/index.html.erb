@@ -5,20 +5,21 @@
         <% @seedpackages.each do |seedpackage| %>
         <div class="card-product row justify-content-between">
           <div class="card-product-infos col-2">
-          <img class="left-img" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <%= cl_image_tag seedpackage.photo, crop: :fill, class: "left-img" %>
           </div>
           <div class="card-product-txt col-10">
             <div class="item-info">
               <h2> <%= link_to seedpackage.name, seedpackage_path(seedpackage) %> </h2>
               <div> <%= seedpackage.description %> </div>
             </div>
-          <div class="user-infos">
-            <img id="avatar-user" class="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-            <div> <%= seedpackage.user.username %> </div>
-          </div>
+            <div class="user-infos">
+              <img id="avatar-user" class="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+              <div> <%= seedpackage.user.username %> </div>
+            </div>
           </div>
         </div>
         <% end %>
       </div>
     </div>
   </div>
+</div>
