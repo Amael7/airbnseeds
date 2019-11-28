@@ -1,0 +1,40 @@
+.page-f {
+  display: flex;
+  justify-content:center;
+}
+
+.form-container {
+  background-color: $green1;
+  border-radius: 25px;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.form-container h1 {
+  // margin-bottom: 40px;
+  font-size: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.form {
+  width: 80%;
+  margin: 40px auto;
+  border-radius: 25px;
+  }
+
+.btn-primary2{
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  background-color: #FE8F8D;
+  margin: 0 auto;
+}
+
+.form-control{
+  border-radius: 8px ;
+}
+
+
