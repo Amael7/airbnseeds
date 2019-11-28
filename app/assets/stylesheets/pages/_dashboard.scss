@@ -14,7 +14,7 @@
 }
 
 .dashboard-user h1{
-  color: #fd4441;
+  color: white;
   font-weight: bold;
   text-align: center;
 }
@@ -30,7 +30,25 @@
 }
 
 .dashboard-cards h2{
-  color: #fd4441;
+  color: white;
   font-weight: bold;
   text-align: center;
+}
+
+.graines-cards {
+  display: flex;
+}
+
+.dashboard-cards p s{
+  color: white;
+  font-style: italic;
+  text-align: center;
+}
+
+.fa-trash {
+  font-size: 24px;
+}
+
+.fa-edit {
+  font-size: 24px;
 }
