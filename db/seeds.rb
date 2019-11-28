@@ -22,8 +22,8 @@ puts 'Creating 25 fake user...'
 
   3.times do
     seedpackage = Seedpackage.new(
-    name:    Faker::Company.name,
-    description: Faker::Lorem.sentence,
+    name:    Faker::Food.vegetables,
+    description: Faker::Food.description,
     location: Faker::Address.full_address,
     photo: Faker::Internet.url,
     package_price: Faker::Number.between(from: 1, to: 10),
@@ -33,8 +33,6 @@ puts 'Creating 25 fake user...'
     seedpackage.save!
   end
 
-end
-
 10.times do
   user = User.new(
     username: Faker::Internet.username,
@@ -43,6 +41,9 @@ end
   )
   user.save!
 end
+
+end
+
 
 puts 'Finished!'
 
