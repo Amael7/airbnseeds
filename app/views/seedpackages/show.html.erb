@@ -5,6 +5,7 @@
 <%= link_to 'Buy', seedpackage_transactions_path(@seedpackage), method: :post, class: 'btn btn-primary'%></h2>
 <p>Sold by&thinsp;: <%= @seedpackage.user.username %>
 <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
+<div class="container">
   <div class="card-container ">
   <div class="img-container">
   <div class="seed-card first-img seed-card-img" style="background-image: url(http://ben-riollet.com/seed/colza1.jpg)">
@@ -16,8 +17,8 @@
   </div>
   </div>
   </div>
-  <!-- <img id="map" src='https://api.mapbox.com/[...]?access_token=pk.eyJ1Ijoicm9tYWluLWh0bnIiLCJhIjoiY2syeWs2bjh1MDg2eTNtcGRpY284cmV6byJ9.q-zSyM4EXeZGxZqVQna3wg'> -->
   <div class="map" style="background-image: url(http://ben-riollet.com/seed/map.png)"><p><%= @seedpackage.location  %></p>
+  </div>
   </div>
   </div>
   <div class="description"> <p><%= @seedpackage.description  %></p> </div>
