@@ -1,0 +1,15 @@
+<div class="page-f">
+  <div class="form-container">
+    <h1>Create a new seedpackage</h1>
+    <div class="form">
+      <%= simple_form_for seedpackage do |f| %>
+      <%= f.input :name, class: "rad" %>
+      <%= f.input :description, class: "rad" %>
+      <%= f.input :location, class: "rad"%>
+      <%= f.input :package_price, class: "rad" %>
+      <%= f.input :photo, class: "rad"%>
+      <%= f.button :submit, class: 'btn btn-primary2' %>
+    </div>
+    <% end %>
+  </div>
+</div>

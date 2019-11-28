@@ -5,12 +5,28 @@
 
   <div class="dashboard-cards">
     <h2>Mes graines</h2>
-      <% @seedpackages_select.each do |seedpackage|  %>
-      <ul>
-        <li><u>Graines:</u> <%= seedpackage.name %>  <br><u>Description:</u> <%= seedpackage.description %> <br><u>Prix:</u> <%= seedpackage.package_price %>€ <br><u>Date de création:</u> <%= seedpackage.created_at %></li>
-      </ul>
+    <p>Vous avez <%= @seedpackages_select.count %> paquets de graines en vente !</p>
+    <div class="graines-cards">
+      <% @seedpackages_select.each do |seedpackage| %>
+      <img src="https://picsum.photos/150/150" alt="">
+      <div class="graines-cards-text">
+        <div><u>Graines:</u> <%= seedpackage.name %>  </div>
+        <div><u>Description:</u> <%= seedpackage.description %></div>
+        <div><u>Date de création:</u> <%= seedpackage.created_at %></div>
+      </div>
+      <div class="graines-cards-text">
+        <div><u>Prix:</u> <%= seedpackage.package_price %>€</div>
+        <div class="button-edit">
+        <%= link_to seedpackage_path(seedpackage), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash destroy_seed"></i>
+        <% end %>
+        <%= link_to edit_seedpackage_path(seedpackage) do %>
+          <i class="fa fa-edit edit_seed"></i>
+          <% end %>
+        </div>
+      </div>
       <% end %>
-      <p>Vous avez <%= @seedpackages_select.count %> paquets de graines en vente !</p>
+    </div>
   </div>
 
   <div class="dashboard-cards">
