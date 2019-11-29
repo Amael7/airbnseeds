@@ -1,6 +1,29 @@
+.container-seeds {
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.seed-cards {
+  justify-content: space-between;
+}
+
+.seeds-header {
+  margin-left: 160px;
+}
+
+.photo-des {
+  margin-left: 80px;
+}
+
+.description-seed {
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
 .seed-card {
   width: 100%;
   padding: 25px;
+  margin-left: 170px;
 }
 .seed-card-img {
   background-size: cover;
@@ -42,27 +65,32 @@
   margin: 10px 0px 0px 10px;
 }
 .map {
-  height: 400px;
-  width: 300px;
-  position: sticky;
+  height: 500px !important;
+  width: 400px !important;
+  // position: sticky;
   top: 0;
-  border-radius: 25px;
-  margin-left: 240px;
+  border-radius: 16px;
+  background-size: cover;
+  // margin-top: 128px;
+  margin-right: 130px;
+  border: solid;
+  border-color: white;
 }
 
-#map {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-}
+// #map {
+//   height: 100vh;
+//   position: sticky;
+//   top: 0;
+// }
 
 .main-container {
   display: flex;
 }
 
-#map {
-  height: 100vh;
-}
+// #map {
+//   height: 100vh;
+
+// }
 
 .cards {
   flex-grow: 1;
