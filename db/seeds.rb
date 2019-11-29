@@ -25,11 +25,11 @@ puts 'Creating 25 fake user...'
     name:    Faker::Food.vegetables,
     description: Faker::Lorem.sentence,
     location: Faker::Address.full_address,
-    photo: Faker::Internet.url,
     package_price: Faker::Number.between(from: 1, to: 10),
     user: user,
     status: 'Disponible'
     )
+    seedpackage.remote_photo_url = "http://res.cloudinary.com/dgpkng6h9/image/upload/v1574951261/courge.jpg"
     seedpackage.save!
   end
 
