@@ -10,7 +10,6 @@ class TransactionsController < ApplicationController
     if @transaction.save
       @seedpackage.update(status: 'Sold Out')
       redirect_to dashboard_path
-
     else
       render 'seedpackages/show'
     end
