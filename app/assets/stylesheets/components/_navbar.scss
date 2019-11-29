@@ -90,4 +90,9 @@
   margin-right: 30px;
   font-size: 32px;
   font-weight: bold;
+  color: $white;
+}
+.Username-in-nav:hover {
+  color: $light-grey;
+  text-decoration: none;
 }
